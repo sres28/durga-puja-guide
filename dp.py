@@ -20,9 +20,9 @@ with tab1:
     veg_pref = st.selectbox("Do you prefer Veg or Non-Veg?", ["Both", "Veg", "Non-Veg"])
     user_prompt = st.text_area("Or write in your own words:")
     if st.button("🍴 Get Food Suggestion"):
-             prompt = f"User selected: Food={food_type}, Spicy={spicy_pref}, VegPref={veg_pref}. Suggest 3 Durga Puja foods with reasons."
+             prompt = f"User selected: Food={food_type}, Spicy={spicy_pref}, VegPref={veg_pref}. Suggest 3 Durga Puja foods with reasons for Kolkata City and give me the famous Place as well"
     else:
-            prompt = f"User wrote: {user_prompt}. Suggest 3 Durga Puja foods they should try with one short reason each."
+            prompt = f"User wrote: {user_prompt}. Suggest 3 Durga Puja pandal based out of the Kolkata City and give your perferences."
 
     response = model.generate_content(prompt)
     st.subheader("Food Suggestion")
@@ -36,7 +36,7 @@ with tab2:
     pandal_prompt = st.text_area("Or describe your pandal style (e.g., traditional, modern, theme-based):")
 
     if st.button("🏛️ Get Pandal Suggestion"):
-             prompt = f"User selected Pandal={pandal_choice}. Suggest what foods to try near this pandal."
+             prompt = f"User selected Pandal={pandal_choice}. Suggest what foods to try near this pandal based of the kolkata city."
     else:
             prompt = f"User wrote: {pandal_prompt}. Suggest a famous pandal in Kolkata they should visit and what food to eat nearby."
 
