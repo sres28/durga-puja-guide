@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # Configure Gemini (replace with your key safely)
-genai.configure(api_key="AIzaSyCJmRUXDi4UIxHu16k3gMzbYpBsB6clZ1E")
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
 st.title("🪔 Durga Puja Companion App 🎉")
